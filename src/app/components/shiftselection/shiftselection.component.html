@@ -1,0 +1,9 @@
+<div class="container"  *ngFor="let item of slides" (click)="onClicked('/hour')">
+  <div class="blue" >
+    <img [src]="item.img" class="img">
+  </div>
+  <div class="texto">
+    <h1>{{item.titulo}}</h1>
+    <p>{{item.desc}}</p>
+  </div>
+</div>

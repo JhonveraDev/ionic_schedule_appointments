@@ -1,0 +1,8 @@
+<div class="bankdraft" *ngFor="let item of bankdraft">
+    <ion-card>
+        <ion-card-subtitle>{{item.day}}, {{item.hour}}PM</ion-card-subtitle>
+        <ion-card-subtitle>USD {{item.pay}} $</ion-card-subtitle>
+        <ion-card-subtitle>{{item.city}} | {{item.zipcode}}</ion-card-subtitle>
+        <ion-card-subtitle>{{item.website}}</ion-card-subtitle>
+    </ion-card>
+</div>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-card>
+    <i class="fab fa-buysellads"></i>
+    <ion-card-title>Sign up!</ion-card-title>
+    <ion-card-subtitle>Please fill your details below to complete your account</ion-card-subtitle>
+  </ion-card>
+</ion-header>
+
+<ion-content class="no-scroll">
+  <div class="name">
+    <ion-item> 
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </div>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Confirm Password</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <div class="check">
+    <p>I authorize the use of personal and financial information to BANK-A.</p>
+    <ion-checkbox color="secondary" checked="true"></ion-checkbox>
+  </div>
+  <div class="sign-up">
+    <div class="button" routerLink="/login">Sign up</div>
+  </div>
+  <h5 routerLink="/login">Already have an account? Login</h5>
+</ion-content>
+
+<app-footer></app-footer>

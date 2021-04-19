@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back-circle-sharp" size="large" routerLink="/city"></ion-icon>
+    </ion-buttons>
+    <ion-title>Requirement Selection </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="no-scroll">
+  <ion-card>
+    <ion-card-subtitle>{{city}}</ion-card-subtitle>
+    <ion-card-subtitle>{{company}}</ion-card-subtitle>
+    <ion-card-subtitle>{{street}} | {{zipcode}}</ion-card-subtitle>
+  </ion-card>
+  
+  <div class="buttons">
+    <div class="button-shift" (click)="noteShift()">
+      <ion-label>Shift Selection</ion-label>
+    </div>
+    <div class="button-bank" (click)="noteBank()">
+      <ion-label>Bank Draft</ion-label>
+    </div>
+  </div>
+
+  <div *ngIf="changeShift === true" >
+    <app-shiftselection></app-shiftselection>
+  </div>
+
+  <div *ngIf="changeBank === true">
+    <app-bankdraft></app-bankdraft>
+  </div>
+
+</ion-content>
+
+<app-footer></app-footer>

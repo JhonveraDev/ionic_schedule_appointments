@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-item lines="none">
+  <ion-title>Select your City</ion-title>
+  </ion-item>
+  <ion-searchbar (ionChange)="buscar($event)" placeholder="Search City"></ion-searchbar>
+  <div class="bar"><h5>Search Result</h5></div>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data | filtro: textoBuscar" [routerLink]="['/request',item.address.city,item.address.zipcode,item.company.name,item.address.street]">
+      <div class="city-list">
+        <ion-label class="name-city">{{item.address.city}}</ion-label>
+        <ion-label>{{item.address.street}}</ion-label>
+        <ion-label>{{item.address.suite}}</ion-label>
+        <ion-label>{{item.company.name}} | {{item.address.zipcode}}</ion-label>
+      </div>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<app-footer></app-footer>
